@@ -94,11 +94,16 @@ end
 function VrsQiyiParser:parse(input)
   local res = mres:new()
   local page_url = input.url
+  return page_url
+--[[
   if page_url == nil or string.len(page_url) == 0 then
     perr.throwErr(ER.kHtmlContentError, "can not get page_url")
   end
   --取到地址后请求地址，拿到html资源
   local html_source = mbase.fetchUrl(page_url, UA.ChromeDestop)
+  return html_source
+  --]]
+--[[
   if html_source == nil then
     perr.throwErr(ER.kHtmlContentError, "can not find html_source")
   end
@@ -117,6 +122,7 @@ function VrsQiyiParser:parse(input)
     perr.throwErr(ER.kHtmlContentError, "QiyiVideoInfo error")
   end
   return res:toJSON()
+  --]]
 end
 VrsQiyiParser.getVrsM3u8 = getVrsM3u8
 return VrsQiyiParser

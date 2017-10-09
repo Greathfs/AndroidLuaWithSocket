@@ -22,3 +22,7 @@ android {
         }
     }
 }
+
+dependencies {
+    compile 'org.apache.httpcomponents:httpcore:4.4.4'
+}
