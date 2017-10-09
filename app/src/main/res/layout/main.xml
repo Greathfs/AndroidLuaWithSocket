@@ -20,9 +20,8 @@
     <TextView android:text="TextView" 
         android:layout_width="match_parent"
         android:id="@+id/statusText"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:scrollbars="vertical"
-        android:maxLines="5"
         android:textColor="@android:color/secondary_text_dark_nodisable">        
     </TextView>
 </LinearLayout>
